@@ -1,9 +1,7 @@
 package com.example.crunchifycalculator;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-//import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,20 +15,21 @@ public class MainActivity extends AppCompatActivity {
             buttonMul, button10, buttonC, buttonEqual;
     EditText crunchifyEditText;
 
+
     float mValueOne, mValueTwo;
 
     boolean crunchifyAddition, mSubtract, crunchifyMultiplication, crunchifyDivision;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //@IdRes int id
-        //button0 = (Button) findViewById( button0);
-        (Button) button0=  AppCompatActivity.findViewById(R.id.button0);
-        button1 = (Button) AppCompatActivity.findViewById(R.id.button1);
-        button2 = (Button) AppCompatActivity.findViewById(R.id.button2);
-        button3 = (Button) AppCompatActivity.findViewById(R.id.button3);
+
+        button0 = (Button) findViewById(R.id.button0);
+        button1 = (Button) findViewById(R.id.button1);
+        button2 = (Button) findViewById(R.id.button2);
+        button3 = (Button) findViewById(R.id.button3);
         button4 = (Button) findViewById(R.id.button4);
         button5 = (Button) findViewById(R.id.button5);
         button6 = (Button) findViewById(R.id.button6);
@@ -117,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 crunchifyEditText.setText(null);
             }
         });
+
 
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 crunchifyEditText.setText(null);
             }
         });
+
 
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -174,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (crunchifyMultiplication == true) {
-                    crunchifyEditText.setText(mValueOne * mValueTwo + "");
+                    crunchifyEditText.setText(mValueOne* mValueTwo + "");
                     crunchifyMultiplication = false;
                 }
 
@@ -184,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
 
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
